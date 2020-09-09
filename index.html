@@ -1,17 +1,54 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-  <title>S 노무</title>
-  <meta charset="utf-8">
-</head>
+<html>
+  <head>
+    <title>스마트 노무관리</title>
+    <meta charset="utf-8">
 
-<body>
-  <h1>S 노무</h1>
+<!--style 태그를 쓰는 2가지방법
+1. 셀렉터{}를 사용해 태그를 지정해준다.
+2.태그내에서 style 태그를 사용해 css적용 style="CSS로 해석됨"
 
-  <ol>
-    <!-- <li><a href="#">회사기본정보</a></li>  -->
-    <!-- <li><a href="#">사원등록</a></li> -->
-    <li><a href="1.html" target="_blank"><u> 연차계산</u></a></li>
-    <!-- <li><a href="#">지원제도검색</a> </li> -->
-  </ol>
-</body>
+style을 통해서 효과를 지정한 다음에는 반드시 ; 세미콜론을 적어줘야한다.
+
+
+37삭제구문 style="color:magenta; text-decoration:underline"
+-->
+<style type="text/css">
+  h1{
+    color:orangered;
+    text-align: center;
+    font-size: 50Px;
+  }
+  a {
+    color:black;
+    text-decoration: none;
+  }
+
+  ol{
+    font-size: 20px;
+  }
+</style>
+
+
+  </head>
+  <body>
+
+    <h1><a href="index.html" style="color:orangered;">  S-LABOR</a></h1>
+    <p></p>
+
+    <ol>
+      <li><a href="1.html">기본정보</a></li>
+      <li><a href="2.html">사원등록</a></li>
+      <li><a href="3.html">연차계산</a></li>
+      <li><a href="4.html">지원제도</a></li>
+    </ol>
+<!-- 이렇게 하면 이후 내용은 다 주석처리
+    <ol>
+      <li><a href="1.html">기본정보</a></li>
+      <li><a href="2.html">사원등록</a></li>
+      <li><a href="4.html">연차계산</a></li>
+      <li><a href="3.html">지원제도</a></li>
+    </ol>
+이렇게 하면 주석이 풀림 -->
+
+</html>

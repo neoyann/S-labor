@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>S 노무</title>
+    <meta charset="utf-8">
+<!--style 태그를 쓰는 2가지방법
+1. 셀렉터{}를 사용해 태그를 지정해준다.
+2.태그내에서 style 태그를 사용해 css적용 style="CSS로 해석됨"
+
+style을 통해서 효과를 지정한 다음에는 반드시 ; 세미콜론을 적어줘야한다.
+
+1 .37삭제구문 style="color:magenta; text-decoration:underline"
+2. .saw 라고 쓰는 순간 saw라는 값을 가지고 있는 클래스에 있는 값에 효과를 변경할 수 있음.
+3. 우선순위 순 id "#active" >> clas ".saw" >> 태그 a{}
+-->
+    <style>
+    #grid{
+
+      display: grid;
+      grid-template-columns: 300px 1fr;
+    }
+    body{
+      margin: 0;
+    }
+      h1{
+        text-align: center;
+        font-size: 70Px;
+        border-bottom: 1px gray solid;
+        padding: 20px;
+        margin: 0px;
+        }
+      a {
+        color:black;
+        text-decoration: none;
+      }
+      #active{
+        color:magenta;
+      }
+      .saw{
+        color:gray;
+      }
+    #grid ul{
+        text-align: center;
+        padding: 40px;
+        width: 200px;
+        border-right:1px solid gray;
+        font-size: 20px;
+        margin: 0;
+
+      }
+    #cal_1{
+        text-align: left;
+        padding:  40px;
+        font-size: 15px;
+        margin: 0;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <h1><a href="index.html" style="color:orangered;">  S-LABOR</a></h1>
+
+  <div id="grid">
+  <div>
+    <ul>
+        <li><a href="1.html" class="saw">기본정보</a></li>
+        <p></p>
+        <li><a href="2.html" class="saw">사원등록</a></li>
+        <p></p>
+        <li><a href="3.html" class="saw" id="active">연차계산</a></li>
+        <p></p>
+        <li><a href="4.html" class="saw">지원제도</a></li>
+        <p></p>
+    </ul>
+  </div>
+  <div id="cal_1">
+    <!-- 이렇게 하면 이후 내용은 다 주석처리
+        이렇게 하면 주석이 풀림 -->
+      입사일: <input type="date" name="입사일" value="">
+      <p></p>
+      최초발생일: <input type="date" name="입사일" value="">
+      <p></p>
+      기준일: <input type="date" id="now_date">
+      <script>
+      document.getElementById('now_date').valueAsDate = new Date();
+      </script>
+      <p></p>
+      근속년수: <input type="number" name="" value="산정일수">
+      <p></p>
+      사용연차: <input type="number" name="" value="잔여일수">
+      <p></p>
+      <input type="submit" name="계산" value="계산하기">
+      <p></p>
+      잔여일수: <input type="number" name="계산" value="계산하기">
+    </div>
+</div>
+
+
+</html>
