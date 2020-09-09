@@ -14,6 +14,8 @@ style을 통해서 효과를 지정한 다음에는 반드시 ; 세미콜론을 
 3. 우선순위 순 id "#active" >> clas ".saw" >> 태그 a{}
 -->
     <style>
+
+
     #grid{
 
       display: grid;
@@ -53,6 +55,21 @@ style을 통해서 효과를 지정한 다음에는 반드시 ; 세미콜론을 
         padding:  40px;
         font-size: 15px;
         margin: 0;
+      }
+
+      @media(max-width:800px){
+      #grid{
+          display:block;
+        }
+          #grid ul{
+            border-right:none;
+          }
+            h1{
+              text-align: none;
+              border-bottom: none;
+              font-size: 30px;
+            }
+
       }
     </style>
 

@@ -1,54 +1,85 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>스마트 노무관리</title>
     <meta charset="utf-8">
-
-<!--style 태그를 쓰는 2가지방법
-1. 셀렉터{}를 사용해 태그를 지정해준다.
-2.태그내에서 style 태그를 사용해 css적용 style="CSS로 해석됨"
-
-style을 통해서 효과를 지정한 다음에는 반드시 ; 세미콜론을 적어줘야한다.
+    <title>S 노무</title>
+    <style>
 
 
-37삭제구문 style="color:magenta; text-decoration:underline"
--->
-<style type="text/css">
-  h1{
-    color:orangered;
-    text-align: center;
-    font-size: 50Px;
-  }
-  a {
-    color:black;
-    text-decoration: none;
-  }
+    #grid{
 
-  ol{
-    font-size: 20px;
-  }
-</style>
+      display: grid;
+      grid-template-columns: 300px 1fr;
+    }
+    body{
+      margin: 0;
+    }
+      h1{
+        text-align: center;
+        font-size: 70Px;
+        border-bottom: 1px gray solid;
+        padding: 20px;
+        margin: 0px;
+        }
+      a {
+        color:black;
+        text-decoration: none;
+      }
+      #active{
+        color:magenta;
+      }
+      .saw{
+        color:gray;
+      }
+    #grid ul{
+        text-align: center;
+        padding: 40px;
+        width: 200px;
+        border-right:1px solid gray;
+        font-size: 20px;
+        margin: 0;
 
+      }
+    #cal_1{
+        text-align: left;
+        padding:  40px;
+        font-size: 15px;
+        margin: 0;
+      }
+
+      @media(max-width:800px){
+      #grid{
+          display:block;
+        }
+          #grid ul{
+            border-right:none;
+          }
+            h1{
+              text-align: none;
+              border-bottom: none;
+              font-size: 30px;
+            }
+
+      }
+    </style>
 
   </head>
   <body>
 
     <h1><a href="index.html" style="color:orangered;">  S-LABOR</a></h1>
-    <p></p>
 
-    <ol>
-      <li><a href="1.html">기본정보</a></li>
-      <li><a href="2.html">사원등록</a></li>
-      <li><a href="3.html">연차계산</a></li>
-      <li><a href="4.html">지원제도</a></li>
-    </ol>
-<!-- 이렇게 하면 이후 내용은 다 주석처리
-    <ol>
-      <li><a href="1.html">기본정보</a></li>
-      <li><a href="2.html">사원등록</a></li>
-      <li><a href="4.html">연차계산</a></li>
-      <li><a href="3.html">지원제도</a></li>
-    </ol>
-이렇게 하면 주석이 풀림 -->
-
+  <div id="grid">
+  <div>
+    <ul>
+        <li><a href="1.html" class="saw">기본정보</a></li>
+        <p></p>
+        <li><a href="2.html" class="saw">사원등록</a></li>
+        <p></p>
+        <li><a href="3.html" class="saw" id="active">연차계산</a></li>
+        <p></p>
+        <li><a href="4.html" class="saw">지원제도</a></li>
+        <p></p>
+    </ul>
+  </div>
+  </body>
 </html>
