@@ -12,88 +12,55 @@ style을 통해서 효과를 지정한 다음에는 반드시 ; 세미콜론을 
 1 .37삭제구문 style="color:magenta; text-decoration:underline"
 2. .saw 라고 쓰는 순간 saw라는 값을 가지고 있는 클래스에 있는 값에 효과를 변경할 수 있음.
 3. 우선순위 순 id "#active" >> clas ".saw" >> 태그 a{}
+4. link 라는 태그를 통해서 CSS파일을 연결시켜줄수 있음
 -->
-    <style>
-
-
-    #grid{
-
-      display: grid;
-      grid-template-columns: 300px 1fr;
-    }
-    body{
-      margin: 0;
-    }
-      h1{
-        text-align: center;
-        font-size: 70Px;
-        border-bottom: 1px gray solid;
-        padding: 20px;
-        margin: 0px;
-        }
-      a {
-        color:black;
-        text-decoration: none;
-      }
-      #active{
-        color:magenta;
-      }
-      .saw{
-        color:gray;
-      }
-    #grid ul{
-        text-align: center;
-        padding: 40px;
-        width: 200px;
-        border-right:1px solid gray;
-        font-size: 20px;
-        margin: 0;
-
-      }
-    #cal_1{
-        text-align: left;
-        padding:  40px;
-        font-size: 15px;
-        margin: 0;
-      }
-
-      @media(max-width:800px){
-      #grid{
-          display:block;
-        }
-          #grid ul{
-            border-right:none;
-          }
-            h1{
-              text-align: none;
-              border-bottom: none;
-              font-size: 30px;
-            }
-
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
 
   </head>
   <body>
+    <!-- <input type="button" name="night" value="night" onclick="
+    document.querySelector('body').style.backgroundColor='black';
+    document.querySelector('body').style.color= 'white';
+    ">
+    <input type="button" name="night" value="day" onclick="
+    document.querySelector('body').style.backgroundColor='white';
+    document.querySelector('body').style.color= 'black';
+    "> -->
+    <input type="button" value="night" onclick="
+    var target = document.querySelector('body');
+    if(this.value === 'night'){
+      target.style.backgroundColor='black';
+      target.style.color= 'white';
+      this.value = 'day'
+    }
+    else{
+      target.style.backgroundColor='white';
+      target.style.color= 'black';
+      this.value = 'night'
+    }
+    ">
+
+
+
+
 
     <h1><a href="index.html" style="color:orangered;">  S-LABOR</a></h1>
 
-  <div id="grid">
-  <div>
-    <ul>
-        <li><a href="1.html" class="saw">기본정보</a></li>
-        <p></p>
-        <li><a href="2.html" class="saw">사원등록</a></li>
-        <p></p>
-        <li><a href="3.html" class="saw" id="active">연차계산</a></li>
-        <p></p>
-        <li><a href="4.html" class="saw">지원제도</a></li>
-        <p></p>
-    </ul>
-  </div>
-  <div id="cal_1">
-    <!-- 이렇게 하면 이후 내용은 다 주석처리
-        이렇게 하면 주석이 풀림 -->
+        <div id="grid">
+        <div>
+          <ul>
+            <li><a href="1.html" class="saw">기본정보</a></li>
+            <p></p>
+            <li><a href="2.html" class="saw">사원등록</a></li>
+            <p></p>
+            <li><a href="3.html" class="saw" id="active">연차계산</a></li>
+            <p></p>
+            <li><a href="4.html" class="saw">지원제도</a></li>
+            <p></p>
+          </ul>
+        </div>
+        <div id="cal_1">
+    <!-- 이렇게 하면 이후 내용은 다 주석처리         이렇게 하면 주석이 풀림 -->
       입사일: <input type="date" name="입사일" value="">
       <p></p>
       최초발생일: <input type="date" name="입사일" value="">
@@ -113,5 +80,30 @@ style을 통해서 효과를 지정한 다음에는 반드시 ; 세미콜론을 
     </div>
 </div>
 
+<input type="button" value="night" onclick="
+if(this.value === 'night'){
+  document.querySelector('body').style.backgroundColor='black';
+  document.querySelector('body').style.color= 'white';
+  this.value = 'day'
+}
+else{
+  document.querySelector('body').style.backgroundColor='white';
+  document.querySelector('body').style.color= 'black';
+  this.value = 'night'
+}
+">
+
+<input type="button" value="night" onclick="
+if(this.value === 'night'){
+  document.querySelector('body').style.backgroundColor='black';
+  document.querySelector('body').style.color= 'white';
+  this.value = 'day'
+}
+else{
+  document.querySelector('body').style.backgroundColor='white';
+  document.querySelector('body').style.color= 'black';
+  this.value = 'night'
+}
+">
 
 </html>
