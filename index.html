@@ -42,7 +42,7 @@ style을 통해서 효과를 지정한 다음에는 반드시 ; 세미콜론을 
             
     <div id="cal_1">          
     <form id ="userForm" action="">    
-    <p>입사일:  <input type="date" name="입사일" id="jDt" max="9999-12-31"></p>    
+    <p>입사일:  <input type="date" name="입사일" id="jDt" max="9999-12-31" value="2010-01-01"></p>    
     <p>발생일:  <input type="date" name="최초발생일" id="iDt" onkeyup='addyear()'></p>      
     <p>산정일:  <input type="date" name="산정기준일" id="bDt"></p>
     <p>근속년수: <input type="text" name="근속년수" id="wYr"></p>
@@ -50,6 +50,7 @@ style을 통해서 효과를 지정한 다음에는 반드시 ; 세미콜론을 
     <p>사용일수: <input type="text" name="연차일수" id="uDt"></p>
     <p>잔여일수: <input type="text" name="연차일수" id="rDt"></p>
     </form>    
+    
     <p> <button onclick="dateDiff_year(); vDate(); sbtdate();">계산하기</button></p>
     
     <p>계산초기화를 원하시면 "F5"를 눌러주세요</p>

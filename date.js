@@ -27,9 +27,7 @@ function dateDiff_year (){
   let wYear = dateDiff / 365;
 
   document.getElementById('wYr').value = Math.floor(wYear); 
-}
-  
-  
+} 
  
 
 function vDate() {
@@ -60,11 +58,7 @@ function vDate() {
   document.getElementById("vDt").value=24;
   } else if (i>20 && i<23){
   document.getElementById("vDt").value=25;
-  } else (i>=23) 
-  document.getElementById("vDt").value=25;       
-}    
-
-function resetForm(){
-
-  document.getElementById("userForm").reset();
+  } else {
+  document.getElementById("vDt").valude=25;       
+}     
 }
