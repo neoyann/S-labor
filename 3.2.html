@@ -15,9 +15,7 @@ style을 통해서 효과를 지정한 다음에는 반드시 ; 세미콜론을 
     <link rel="stylesheet" href="style.css">
     <!-- <script defer src="CAL_1.js"></script> -->
     <!-- <script defer src="date.js"></script> -->
-    <script defer src="CAL_date_1.js"></script>
-    <script defer src="general.js"></script>
-
+    <script defer src="CAL_date_2.js"></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js" integrity="sha512-Q1f3TS3vSt1jQ8AwP2OuenztnLU6LwxgyyYOG1jgMW/cbEMHps/3wjvnl1P3WTrF3chJUWEoxDUEjMxDV8pujg==" crossorigin="anonymous"></script> -->
 
@@ -35,7 +33,7 @@ style을 통해서 효과를 지정한 다음에는 반드시 ; 세미콜론을 
             <p></p>
             <li><a href="2.html" class="saw">사원등록</a></li>
             <p></p>
-            <li><a href="3.1.html" class="saw" id="active">연차계산</a></li>
+            <li><a href="3.html" class="saw" id="active">연차계산</a></li>
             <p></p>
             <li><a href="4.html" class="saw">지원제도</a></li>
             <p></p>
@@ -48,22 +46,21 @@ style을 통해서 효과를 지정한 다음에는 반드시 ; 세미콜론을 
       <div id="cal_1">    
         <form method="get" action="form-action.html">
           <p>근속년수구분</p>
-          <label><input type="checkbox" onclick="movepage(3.1.html)">1년이상</label> 
-          
-          <label><input type="checkbox" onclick="movepage(3.2.html)"> 1년미만</label>
+          <label><input type="checkbox"> 1년이상</label>
+          <label><input type="checkbox"> 1년미만</label>
         </form>
         <p></p>
          
       <form id ="userForm" action="">    
-        <p>입사일:  <input type="date" name="입사일" id="jDt" max="9999-12-31" ></p>    
-        <p>발생일:  <input type="date" name="최초발생일" id="iDt" onkeyup='addyear()'></p>      
+        <p>입사일:  <input type="date" name="입사일" id="jDt"  max="9999-12-31" ></p>    
+        <!-- <p>발생일:  <input type="date" name="최초발생일" id="iDt" onkeyup='addyear()'></p>       -->
         <p>산정일:  <input type="date" name="산정기준일" id="bDt"></p>
-        <p>근속년수: <input type="text" name="근속년수" id="wYr"></p>
+        <p>근무월수: <input type="text" name="근무월수" id="wMt"></p>
         <p>연차일수: <input type="text" name="연차일수" id="vDt"></p>
-        <p>사용일수: <input type="text" name="연차일수" id="uDt"></p>
+        <p>사용일수: <input type="text" name="사용일수" id="uDt"></p>
         <p>잔여일수: <input type="text" name="연차일수" id="rDt"></p>
       </form>    
-        <p> <button onclick="dateDiff_year(); vDate(); sbtdate();">계산하기</button></p>
+        <p> <button onclick="dateDiff_month(); vDate_2(); sbtdate();">계산하기</button></p>
         <p>계산초기화를 원하시면 "F5"를 눌러주세요</p>
     <!-- <p> <input type="button" value="계산초기화" onClick="resetForm()"/></p> -->
         </div>    
