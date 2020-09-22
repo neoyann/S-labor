@@ -1,0 +1,35 @@
+<html>
+
+
+<h1>연차계산하기</h1>
+
+<label>입사일:</label><br>
+<input id='j_Dt' type="date"   ><p></p>
+
+<label>최초발생일:</label><br>
+<input id='i_Dt' type="text"><p></p>
+
+<label>산정기준일:</label><br>
+<input id='st_Dt' type="date"><p></p>
+
+<label>근속년수:</label><br>
+<input id='_Yr' type="date"><p></p>
+
+<button onclick="addyear()">계산하기</button>
+
+<script>
+ document.getElementById('st_Dt').valueAsDate = new Date();
+ document.getElementById('i_Dt').value = addyear();
+
+function addyear(){
+  let newDt = document.getElementById('j_Dt').valueAsDate;
+      year = newDt.getFullYear() + 1 ;
+      month = newDt.getMonth() + 1 ;
+      date = newDt.getDate();
+      document.getElementById('i_Dt').value = `${year}-${month}-${date}` ;
+      }
+</script>
+
+
+</html>
+<!-- var x = document.getElementById("S_Date").value; -->
