@@ -64,3 +64,14 @@ function vDate() {
   document.getElementById("vDt").valude=25;       
   }
 }
+
+
+function value_check() {
+  var check_count = document.getElementsByName("fruit").length;
+
+  for (var i=0; i<check_count; i++) {
+      if (document.getElementsByName("fruit")[i].checked == true) {
+          alert(document.getElementsByName("fruit")[i].value);
+      }
+  }
+}
