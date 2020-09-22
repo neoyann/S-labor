@@ -25,8 +25,11 @@ function dateDiff_year (){
   let dateDiff = Math.ceil((edt.getTime()-sdt.getTime())/(1000*3600*24)); 
   // console.log(`${dateDiff}.${typeof dateDiff}`);
   let wYear = dateDiff / 365;
+
   document.getElementById('wYr').value = Math.floor(wYear); 
 }
+  
+  
  
 
 function vDate() {
@@ -57,7 +60,11 @@ function vDate() {
   document.getElementById("vDt").value=24;
   } else if (i>20 && i<23){
   document.getElementById("vDt").value=25;
-  } else {
-  document.getElementById("vDt").valude=25;       
-}     
+  } else (i>=23) 
+  document.getElementById("vDt").value=25;       
+}    
+
+function resetForm(){
+
+  document.getElementById("userForm").reset();
 }
