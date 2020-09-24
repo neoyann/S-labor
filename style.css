@@ -1,4 +1,18 @@
 
+#s_title_1{
+
+  color:orangered;
+  font-weight:bold;
+  font-size: 20Px;
+}
+#s_title_2{
+
+  color:orangered;
+  font-weight:bold;
+  font-size: 20Px;
+}
+
+
 
 #grid{
   display: grid;
@@ -6,6 +20,7 @@
 }
 body{
   margin: 0;
+  /* background-color: lightskyblue; */
 }
   h1{
     text-align: center;
@@ -34,8 +49,9 @@ body{
     margin: 0;
   }
 #cal_1{
-    text-align: left;
-    padding:  30px;
+    text-align: left;  
+    padding-top: 0;  
+    /* padding:  30px; */
     font-size: 15px;
     margin: 0;
   }
@@ -54,3 +70,9 @@ body{
         }
 
   }
+
+  #rDt_1{
+    padding-bottom: 40px;
+  }
+
+  
