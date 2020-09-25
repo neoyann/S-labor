@@ -68,11 +68,16 @@ body{
           border-bottom: none;
           font-size: 30px;
         }
+      }
+      
 
-  }
-
-  #rDt_1{
+  /* #rDt_1{
     padding-bottom: 40px;
   }
 
+   */
+
+  #btn_1{
+    padding-bottom: 40px;
+  }
   

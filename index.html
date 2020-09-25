@@ -46,11 +46,11 @@ style을 통해서 효과를 지정한 다음에는 반드시 ; 세미콜론을 
     
     <div id="cal_1">   
       
-        <form id ="basicinfo" action="">
+        <form id ="basicinfo_1" action="">
         
           <!-- <legend>연차정보</legend>               -->
          
-            <p id="s_title_1" >1.근속년수구분</p>
+            <p id="s_title_1" >1.연차계산</p>
                 
             
             <label><input type="checkbox" onclick="movepage('3.1.html');">1년이상</label>           
@@ -64,24 +64,26 @@ style을 통해서 효과를 지정한 다음에는 반드시 ; 세미콜론을 
             <p>사용일수: <input type="text" name="연차일수" id="uDt"></p>
             <p id="rDt_1">잔여일수: <input type="text" name="연차일수" id="rDt"></p> 
           </form> 
-         
+            <p id=btn_1> <button onclick="dateDiff_year(); vDate(); sbtdate();">계산하기</button></p>
+            
      
       
-      
+        <form id ="basicinfo_2" action="">
             <!-- <legend>연차수당계산</legend> -->
-            <p id="s_title_2" >2.연차수당계산하기</p>
+            <p id="s_title_2" >2.연차수당계산</p>
             <hr>
-            <span>기본급여: <input type="text" name="기본급여" id="bWage" ></span>
-            <span>상여금: <input type="text" name="기본급여" id="sWage" ></span>
-            <span>제수당: <input type="text" name="각종수당" id="exWage" ></span>         
-
-            <p>통상임금: <input type="text" name="통상임금" id="uWage" ></p>
-
-
-            
-            <p> <button onclick="dateDiff_year(); vDate(); sbtdate(); cal_usualwage()">계산하기</button></p>
+            <span>기본급여: <input type="text" style="text-align: right;" name="기본급여" id="bWage" onkeyup="cmaComma(this);"  ></span>
+            상여금: <input type="text" style="text-align: right;" name="상여금" id="sWage" onkeyup="cmaComma(this);"  ></span>
+            <p>통상임금: <input type="text" style="text-align: right;" name="통상임금" id="uWage"  ></p>
+            <p>시간급여: <input type="text" style="text-align: right;" name="시간급여" id="tWage"  ></p>
+            <p>1일통상임금: <input type="text" style="text-align: right;" name="1일통상임금" id="oneWage"  ></p>
+            <p>연차수당: <input type="text" style="text-align: right;" name="연차수당" id="vWage"  ></p>
+          </form>
+          
+            <p> <button onclick="cal_usualwage(); cal_timewage (); cal_vactionwage(); ">계산하기</button></p>
             <p>계산초기화를 원하시면 "F5"를 눌러주세요</p>
           <!-- <p> <input type="button" value="계산초기화" onClick="resetForm()"/></p> -->      
+        
           
     </div>        
   
